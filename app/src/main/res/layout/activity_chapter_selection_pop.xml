@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="@color/middle_gray"
+    tools:context=".ChapterSelectionPopActivity">
+
+    <TextView
+        android:id="@+id/textView_choose_chapter"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/light_grey"
+        android:textStyle="normal"
+        android:textSize="23sp"
+        android:text="Tap to choose Chapter: "/>
+
+    <Spinner
+        android:id="@+id/chapter_selection_spinner"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/textView_choose_chapter"
+        android:layout_marginTop="10dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:spinnerMode="dialog"
+        android:background="@color/dark_gray"
+        android:nestedScrollingEnabled="true"
+        android:layout_height="40dp"></Spinner>
+
+    <TextView
+        android:id="@+id/textView_random_mode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/chapter_selection_spinner"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/light_grey"
+        android:textStyle="normal"
+        android:textSize="23sp"
+        android:text="Questions in Random Sequence:"/>
+
+    <android.support.v7.widget.AppCompatCheckBox
+        android:id="@+id/checkbox_random_mode"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toBottomOf="@id/textView_random_mode"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/light_grey"
+        android:button="@drawable/abc_btn_check_material"
+        android:buttonTint="@color/light_grey"
+        android:text="Random"/>
+
+
+    <Button
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        android:text="Next"
+        />
+
+    <!--<com.airbnb.lottie.LottieAnimationView-->
+        <!--android:id="@+id/animation_view_loading_lottie"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:padding="60dp"-->
+        <!--app:layout_constraintTop_toBottomOf="@id/checkbox_random_mode"-->
+        <!--app:layout_constraintBottom_toTopOf="@id/next_button"-->
+        <!--android:scaleType="centerCrop"-->
+        <!--app:lottie_url="https://assets8.lottiefiles.com/datafiles/67bae0ddb57b26679d10e9ce7c1d445f/data.json"-->
+        <!--app:lottie_loop="true"-->
+        <!--app:lottie_autoPlay="false" />-->
+
+</android.support.constraint.ConstraintLayout>
